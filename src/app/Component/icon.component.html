@@ -1,0 +1,39 @@
+<style>
+  .child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #21759b;;
+  }
+  .button-container {
+      padding-bottom: 20px;
+      flex-basis: 30%;
+  }
+  .icon-container {
+      padding-bottom: 20px;
+      min-height: 64px;
+      flex-basis: 70%;
+  }
+  .button {
+    font-family: 'Rubik',Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: -0.03px;
+    border-radius: 6px;
+    border: none;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+</style>
+
+<div class="child">
+  <div class="button-container">
+    <button class="button" label="Click" (click)="getRandom()">Show random icon</button>
+  </div>
+  <div class="icon-container">
+    <fa-icon *ngIf="display" [icon]="randomSvg" size="4x"></fa-icon>
+  </div>
+</div>
